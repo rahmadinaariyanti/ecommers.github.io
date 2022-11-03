@@ -2,8 +2,8 @@
 if($aksi=='index'){
     
     $data['jenis']=$db->query($connect,"SELECT * FROM tjenis");
-    $d['title'] = "Jenis";
-    $helpers->load_view('templates/header.php',$d);
+    $data['title'] = "Jenis";
+    $helpers->load_view('templates/header.php',$data);
     $helpers->load_view('jenis/jenis.php',$data);
     $helpers->load_view('templates/footer.php');
 }

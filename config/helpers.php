@@ -7,7 +7,7 @@ class Helpers
 {
 	
 	function base_url() {
-		return $base_url = 'http://localhost/dbpenjualan/';
+		return $base_url = 'http://localhost/ecommers/';
 	}
 
 	function template($view, $data = '') {
