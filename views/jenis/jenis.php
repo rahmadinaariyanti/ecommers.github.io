@@ -1,5 +1,5 @@
-<table border=1>
-    <caption><h1>List Jenis</h1></caption>
+<div data-role="panel" data-title-caption="List Jenis" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
+   <table class="table row-hover">
     <thead>
         <th>Nomor</th>
         <th>Jenis</th>
@@ -14,11 +14,12 @@
         <td><?= $no ?></td>
         <td><?= $jenis['jenisbarang'] ?></td>
         <td><?= $jenis['ket'] ?></td>
-        <td>Ubah</td>
-        <td>Hapus</td>
+        <td><a class="button info"href="<?= $base_url.'jenis/edit/'.$jenis['idjenis'] ?>"><span class="mif-pencil"></span></a>
+        <a class="button alert"href="<?= $base_url.'jenis/hapus/'.$jenis['idjenis'] ?>"onclick="return confirm('Yakin anda ingin menghapus?')"><span class="mif-bin"></span></a></td>
     </tbody>
     <?php
         $no++;
         }
     ?>
 </table>
+    </div>

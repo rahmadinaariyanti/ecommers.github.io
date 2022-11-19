@@ -1,5 +1,5 @@
-<table border=1>
-    <caption><h1>List Distributor</th></caption>
+<div data-role="panel" data-title-caption="Data Distributor" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
+<table class="table row-hover">
     <thead>
         <th>Nomor</th>
         <th>Nama Distributor</th>
@@ -16,8 +16,8 @@
         <td><?= $distributor['nmdist'] ?></td>
         <td><?= $distributor['alamat'] ?></td>
         <td><?= $distributor['notelp'] ?></td>
-        <td>Ubah</td>
-        <td>Hapus</td>
+        <td><a class="button info" href="<?= $base_url.'distributor/edit/'.$distributor['iddist']?>"><span class="mif-pencil"></a>
+        <a class="button alert" href="<?= $base_url.'distributor/hapus/'.$distributor['iddist'] ?>"onclick="return confirm('Yakin anda ingin menghapus?')"><span class="mif-bin"></span></a></td>
     </tbody>
     <?php
         $no++;
