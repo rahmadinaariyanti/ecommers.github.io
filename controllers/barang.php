@@ -31,3 +31,26 @@ if($aksi=='edit'){
     $data['distri']=$db->query($connect, "SELECT * FROM tdistributor");
     $helpers->template('Barang/editbarang.php',$data);
 }
+if ($aksi == 'ubah') {
+    $idbarang = $uri[4];
+    $nmbarang = $_POST['nmbarang'];
+    $idjenis = $_POST['idjenis'];
+    $stok = $_POST['stok'];
+    $harga = $_POST['harga'];
+    $iddist = $_POST['iddist'];
+    $ubah = $db->qry($connect, "UPDATE tbarang SET nmbarang='$nmbarang', idjenis='$idjenis', stok='$stok', harga='$harga', iddist='$iddist' WHERE idbarang='$idbarang'");
+    if ($ubah) {
+        header('location:' . $base_url . 'barang');
+    } else {
+        header('location:' . $base_url . 'barang/edit');
+    }
+}
+if($aksi=='hapus'){
+    $idbarang=$uri[4];
+    $hapus=$db->qry($connect,"DELETE FROM tbarang WHERE idbarang='$idbarang'");
+    if($hapus)
+    header('location:'.$base_url.'barang');
+    else{
+        header('location:'.$base_url.'barang/hapus');
+    }
+}

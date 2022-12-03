@@ -27,7 +27,7 @@
         <ul class="navview-menu mt-4" id="side-menu">
             <li class="item-header">MAIN NAVIGATION</li>
             <li>
-                <a href="#dashboard">
+                <a href="dashboard">
                     <span class="icon"><span class="mif-meter"></span></span>
                     <span class="caption">Dashboard</span>
                 </a>
@@ -56,10 +56,16 @@
                     <span class="caption">Data Distributor</span>
                 </a>
             </li>
+            <li>
+                <a href="petugas">
+                    <span class="icon"><span class="mif-user fg-blue"></span></span>
+                    <span class="caption">Petugas</span>
+                </a>
+            </li>
 
             <li class="item-header">Proses</li>
             <li>
-                <a href="">
+                <a href="jual">
                     <span class="icon"><span class="mif-cart fg-orange"></span></span>
                     <span class="caption">Transaksi</span>
                 </a>

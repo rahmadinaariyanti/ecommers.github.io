@@ -1,11 +1,13 @@
 <?php
 if($aksi=='index'){
-    
     $data['jenis']=$db->query($connect,"SELECT * FROM tjenis");
     $helpers->template('jenis/jenis.php',$data);
 }
 if($aksi=='Add'){
-    $helpers->template('jenis/addjenis.php');
+    $data['idjenis']=$db->query($connect,"SELECT max(idjenis) as idjenis FROM tjenis");
+    $data['jenbarang']=$db->query($connect, "SELECT * FROM tjenis");
+    $data['distri']=$db->query($connect, "SELECT * FROM tdistributor");
+    $helpers->template('jenis/addjenis.php',$data);
 }
 if($aksi=='save'){
     $jenisbarang=$_POST['jenisbarang'];

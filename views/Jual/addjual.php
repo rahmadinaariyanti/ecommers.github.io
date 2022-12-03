@@ -57,7 +57,7 @@ foreach($data['jual'] as $jual) {
         </div>
         <div>
             <label for="">Total Harga</label>
-            <input type="number" name="totalharga" id="" onfocus="startCalc()" onblur="stopCalc()" readonly>
+            <input type="number" name="totalharga" id="" onfocus="startCalc()" onblur="stopCalc()" required>
         </div>
         <div>
             <label for="">Bayar</label>
@@ -65,7 +65,7 @@ foreach($data['jual'] as $jual) {
         </div>
         <div>
             <label for="">Kembalian</label>
-            <input type="number" name="kembali" id="" onfocus="starCalc()" onblur="stopCalc()" readonly>
+            <input type="number" name="kembali" id="" onfocus="starCalc()" onblur="stopCalc()" required>
         </div>
         <div>
             <button type="submit">Simpan</button>
